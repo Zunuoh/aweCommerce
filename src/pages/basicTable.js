@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import * as ReactBootStrap from 'react-bootstrap'
+import { Plus, Trash, Edit } from "react-feather";
 
 
 const BasicTable = () =>{
@@ -24,7 +25,7 @@ const BasicTable = () =>{
  
     return(
         <div>
-        <ReactBootStrap.Table striped bordered hover>
+        <ReactBootStrap.Table striped bordered hover style={{width:"100%"}}>
   <thead>
     <tr>
       <th>ID</th>
@@ -32,9 +33,10 @@ const BasicTable = () =>{
       <th>Description</th>
       <th>Price</th>
       <th>Quantity</th>
+      <th>Actions</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody style={{ }}>
       {
          itemResponse.blogs && itemResponse.blogs.map((item)=>(
             <tr key={item.id}>
@@ -43,6 +45,11 @@ const BasicTable = () =>{
             <td>{item.descr}</td>
             <td>{item.price}</td>
             <td>{item.qty}</td>
+            <td style={{width:190}}>
+              <Plus style={{marginLeft:20}}/>
+              <Trash style={{marginTop:5, marginLeft:20}}/>
+              <Edit  style={{marginTop:5, marginLeft:20}}/>
+            </td>
           </tr>
          ))
       }
