@@ -8,8 +8,8 @@ import DeleteModal from './modals/deleteModal';
 
 function App() {
   return (
-    <BasicTable/>
-  //  <HomePage/>
+    // <BasicTable/>
+   <HomePage/>
   // <EditModal/>
   // <AddModal/>
   // <DeleteModal/>

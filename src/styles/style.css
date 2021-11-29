@@ -1,0 +1,12 @@
+.dashContainer{
+   padding: 50px;
+   height: 100vh;
+   font-size: 20px;
+   padding-top: 40px;
+   color: white;
+   font-weight: 600;
+}
+
+.dashMain{
+    background-color:#55185D;
+}

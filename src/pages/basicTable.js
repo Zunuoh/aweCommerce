@@ -21,15 +21,37 @@ const BasicTable = () => {
 
   return (
     <div>
-      { openAddModal && (<AddModal  closeModal={setOpenAddModal}
-              // id={item.id}
-              callback={() => {
-                // fetchTableData();
-                setOpenAddModal(false);
-              }}
-            />)}
+      <div style={{display:"flex",
+            justifyContent: "flex-end",
+            margin:20}}>
+        <button
+          style={{
+            backgroundColor: "#FFD524",
+            width: 100,
+            height: 50,
+            borderWidth: 0,
+            // borderRadius: 20,
+            fontFamily: "Montserrat",
+            fontWeight: "bold",
+            // color:"white"
+            
+          }}
+        >
+          Add Item
+        </button>
+      </div>
+      {openAddModal && (
+        <AddModal
+          closeModal={setOpenAddModal}
+          // id={item.id}
+          callback={() => {
+            // fetchTableData();
+            setOpenAddModal(false);
+          }}
+        />
+      )}
       <ReactBootStrap.Table striped bordered hover style={{ width: "100%" }}>
-        <thead>
+        <thead style={{backgroundColor:"#55185D", borderColor:"black", color:"white"}}>
           <tr>
             <th>ID</th>
             <th>Name</th>
@@ -57,14 +79,14 @@ const BasicTable = () => {
                     }}
                   />
                   <Trash
-                    style={{ marginTop: 5, marginLeft: 20 }}
+                    style={{ marginTop: 5, marginLeft: 40, color:"#876796" }}
                     onClick={() => {
                       setOpenDeleteModal(true);
                       setItemResponse(item);
                     }}
                   />
                   <Edit
-                    style={{ marginTop: 5, marginLeft: 20 }}
+                    style={{ marginTop: 5, marginLeft: 40, color:"#876796" }}
                     onClick={() => {
                       setOpenEditModal(true);
                       setItemResponse(item);

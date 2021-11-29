@@ -19,5 +19,6 @@ export const COLUMNS =[
         Header: 'Quantity',
         accessor: 'qty'
         
-    }
+    },
+   
 ]

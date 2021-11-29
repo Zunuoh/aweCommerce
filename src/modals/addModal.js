@@ -39,8 +39,8 @@ const AddModal = ({callback, closeModal}) => {
             </button>
           </div>
           <div className="title">
-            <h1 style={{ color: "green", fontFamily: "Montserrat" }}>
-              ADD WALLET
+            <h1 style={{ color: "#876796", fontFamily: "Montserrat" }}>
+              ADD ITEM
             </h1>
           </div>
           <div className="modalBody">
@@ -67,7 +67,7 @@ const AddModal = ({callback, closeModal}) => {
                           lastName: e.target.value,
                         })
                       }
-                      style={{ borderColor: "green", fontFamily: "Montserrat" }}
+                      style={{ borderColor: "#55185D", fontFamily: "Montserrat" }}
                     />
                   </div>
                   <div className="form-group col-md-6" style={{ marginLeft: 20 }}>
@@ -87,7 +87,7 @@ const AddModal = ({callback, closeModal}) => {
                           descr: e.target.value,
                         })
                       }
-                      style={{ borderColor: "green", fontFamily: "Montserrat" }}
+                      style={{ borderColor: "#55185D", fontFamily: "Montserrat" }}
                     />
                   </div>
                 </div>
@@ -112,7 +112,7 @@ const AddModal = ({callback, closeModal}) => {
                           price: e.target.value,
                         })
                       }
-                      style={{ borderColor: "green", fontFamily: "Montserrat" }}
+                      style={{ borderColor: "#55185D", fontFamily: "Montserrat" }}
                     />
                   </div>
                   <div className="form-group col-md-6" style={{ marginLeft: 20 }}>
@@ -135,7 +135,7 @@ const AddModal = ({callback, closeModal}) => {
                           qty: e.target.value,
                         })
                       }
-                      style={{ borderColor: "green", fontFamily: "Montserrat" }}
+                      style={{ borderColor: "#55185D", fontFamily: "Montserrat" }}
                     />
                   </div>
                 </div>
