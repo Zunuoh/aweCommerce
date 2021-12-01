@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './headers';
-import BasicTable from './basicTable';
-import Dashboard from './dashboard';
+import Header from '../header/headers';
+import BasicTable from '../others/basicTable';
+import Dashboard from '../others/dashboard';
 import * as ReactBootStrap from 'react-bootstrap'
 import {  Row, Col } from 'react-bootstrap';
 

@@ -2,13 +2,17 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import * as ReactBootStrap from "react-bootstrap";
 import { Plus, Trash, Edit } from "react-feather";
-import AddModal from "../modals/addModal";
+import AddModal from "../../modals/addModal";
+import DeleteModal from "../../modals/deleteModal";
+
 
 const BasicTable = () => {
   const [itemResponse, setItemResponse] = useState({ blogs: [] });
   const [openAddModal, setOpenAddModal] = useState(false);
   const [openEditModal, setOpenEditModal] = useState(false);
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+
 
   useEffect(() => {
     const fetchTableData = async () => {
@@ -17,7 +21,7 @@ const BasicTable = () => {
       console.log(data);
     };
     fetchTableData();
-  }, [setItemResponse]);
+  }, [openModal, setItemResponse]);
 
   return (
     <div>
@@ -34,13 +38,20 @@ const BasicTable = () => {
             fontFamily: "Montserrat",
             fontWeight: "bold",
             // color:"white"
-            
+          }}
+          onClick={()=>{
+            setOpenModal(true);
           }}
         >
           Add Item
         </button>
+        <AddModal 
+          isOpen={openModal} 
+          onClose={() => {
+            setOpenModal(false);
+          }}/>
       </div>
-      {openAddModal && (
+      {/* {openAddModal && (
         <AddModal
           closeModal={setOpenAddModal}
           // id={item.id}
@@ -49,7 +60,7 @@ const BasicTable = () => {
             setOpenAddModal(false);
           }}
         />
-      )}
+      )} */}
       <ReactBootStrap.Table striped bordered hover style={{ width: "100%" }}>
         <thead style={{backgroundColor:"#55185D", borderColor:"black", color:"white"}}>
           <tr>
@@ -61,7 +72,7 @@ const BasicTable = () => {
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody style={{}}>
+        <tbody style={{width:40}}>
           {itemResponse.blogs &&
             itemResponse.blogs.map((item) => (
               <tr key={item.id}>
@@ -71,13 +82,8 @@ const BasicTable = () => {
                 <td>{item.price}</td>
                 <td>{item.qty}</td>
                 <td style={{ width: 190 }}>
-                  <Plus
-                    style={{ marginLeft: 20 }}
-                    onClick={() => {
-                      setOpenAddModal(true);
-                      setItemResponse(item);
-                    }}
-                  />
+                <div style={{display:"flex", flexDirection:"row"}}>
+                  {/* <div>
                   <Trash
                     style={{ marginTop: 5, marginLeft: 40, color:"#876796" }}
                     onClick={() => {
@@ -85,6 +91,11 @@ const BasicTable = () => {
                       setItemResponse(item);
                     }}
                   />
+                  <DeleteModal
+                  isOpen={openDeleteModal}
+                  onClose={()=>{setOpenDeleteModal(false)}}/>
+                  </div> */}
+                  <div>
                   <Edit
                     style={{ marginTop: 5, marginLeft: 40, color:"#876796" }}
                     onClick={() => {
@@ -92,6 +103,8 @@ const BasicTable = () => {
                       setItemResponse(item);
                     }}
                   />
+                  </div>
+                  </div>
                 </td>
               </tr>
             ))}

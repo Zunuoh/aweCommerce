@@ -1,17 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const DeleteModal = ({closeModal, id, callback}) => {
-    // const deleteItem = async () => {
-    //     await WalletService.deleteItem(id);
-    //     callback();
-    //   };
+const DeleteModal = ({closeModal, id, callback, onClose, isOpen}) => {
+  const[deleteModalIsOpen, setDeleteModalIsOpen] = useState(false);
     
     return (
         <div className="modalBackground">
         <div className="deleteModalContainer">
           <div className="titleCloseBtn">
 
-          <button onClick={()=>closeModal(false)} style={{fontFamily:"Montserrat", color:"green"}}> X </button>
+          <button onClick={()=>onClose()} style={{fontFamily:"Montserrat", color:"green"}}> X </button>
           </div>
           <div className="title">
             <h3 style={{color:"green", fontFamily:"Montserrat"}}>DELETE WALLET</h3>
@@ -21,7 +18,7 @@ const DeleteModal = ({closeModal, id, callback}) => {
           </div>
           <div className="footer">
             {/* <button style={{fontFamily:"Montserrat"}} onClick={deleteWallet}>Yes</button> */}
-            <button onClick={()=>closeModal(false)} style={{fontFamily:"Montserrat"}}>No</button>
+            <button onClick={()=>onClose()} style={{fontFamily:"Montserrat"}}>No</button>
           </div>
         </div>
       </div>

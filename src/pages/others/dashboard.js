@@ -1,7 +1,8 @@
 import React from 'react'
-import '../styles/style.css'
-import Header from './headers'
+import '../../styles/style.css'
+import Header from '../header/headers'
 import {Columns, MessageSquare, MessageCircle,Settings, User, Bell} from 'react-feather'
+import {Link} from 'react-router-dom'
 
 const Dashboard = () => {
     return (
@@ -32,11 +33,14 @@ const Dashboard = () => {
                 <User/>
                 <div style={{marginLeft:10}}>Account</div>
             </div>
-
+            
+           
             <div style={{marginTop:30, display:"flex", flexDirection:"row"}}>
                 <Bell/>
                 <div style={{marginLeft:10}}>Notifications</div>
             </div>
+         
+            
         </div>
         </div>
     )
