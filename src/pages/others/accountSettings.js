@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react';
+
+
 
 const AccountSettings = () => {
     return (
@@ -6,8 +8,32 @@ const AccountSettings = () => {
             <div style={{fontSize:40, fontWeight:"bold"}}>
                 Account Settings
             </div>
-            <div style={{width:"90%", height:700 , backgroundColor:"red", marginTop:30, marginLeft:30}}>
-                <div style={{backgroundColor:"blue", width:150, height:150}}>
+            <div style={{}} className="accountDiv">
+                <div style={{backgroundColor:"blue", width:300, height:150, marginLeft:60, marginTop:10  }}>
+                    kjk
+                </div>
+                <div style={{backgroundColor:"blue", width:300, height:150, marginLeft:60, marginTop:10  }}>
+                    kjk
+                </div>
+                <div style={{backgroundColor:"blue", width:300, height:150, marginLeft:60, marginTop:10  }}>
+                    kjk
+                </div>
+                <div style={{backgroundColor:"blue", width:300, height:150, marginLeft:60, marginTop:10  }}>
+                    kjk
+                </div>
+                <div style={{backgroundColor:"blue", width:300, height:150, marginLeft:60, marginTop:10  }}>
+                    kjk
+                </div>
+                <div style={{backgroundColor:"blue", width:300, height:150, marginLeft:60, marginTop:10  }}>
+                    kjk
+                </div>
+                <div style={{backgroundColor:"blue", width:300, height:150, marginLeft:60, marginTop:10  }}>
+                    kjk
+                </div>
+                <div style={{backgroundColor:"blue", width:300, height:150, marginLeft:60, marginTop:10  }}>
+                    kjk
+                </div>
+                <div style={{backgroundColor:"blue", width:300, height:150, marginLeft:60, marginTop:10  }}>
                     kjk
                 </div>
             </div>
